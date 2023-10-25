@@ -1,0 +1,48 @@
+{% load static %}
+<html>
+<head>
+
+    <title>
+        {% block 'title' %}
+       Display Products
+        {% endblock %}
+    </title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+{% block 'body' %}
+<h2 align="center"><u>View All Customers Registered</u></h2>
+<br>
+<table align="center" border="2">
+    <tr style="font-weight:bold">
+        <td>ID</td>
+        <td>Cateogry</td>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Price</td>
+        <td>Image</td>
+    </tr>
+    {% for product in productlist %}
+    <tr>
+        <td>{{product.id}}</td>
+        <td>{{product.firstname}}</td>
+         <td>{{product.lastname}}</td>
+         <td>{{product.interest}}</td>
+         <td>{{product.amount}}</td>
+         <td>
+             <img src="{{product.image.url}}" width="25%" height="25%">
+         </td>
+
+
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+{% endblock %}
+
+
+
+</body>
+</html>

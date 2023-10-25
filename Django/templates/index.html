@@ -1,0 +1,75 @@
+{% load static %}
+<html>
+<head>
+    <title>
+        {% block 'title' %}
+        Main
+        {% endblock %}
+    </title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Viga&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow: hidden; }
+         ul { position: relative; } ul li { list-style: none; text-align: center; } ul li a { color: #333; text-decoration: none; font-size: 3em; padding: 5px 20px; display: inline-flex; font-weight: 700; transition: 0.5s; } ul:hover li a { color: #0002; } ul li:hover a { color: #000; background: rgba(255,255,255,1); } ul li a:before { content: ''; position: absolute; top: 50%; left: 40%; transform: translate(-50%,-50%); display: flex; justify-content: center; align-items: center; font-size: 5em; color: rgba(0,0,0,.1); border-radius: 50%; z-index: -1; opacity: 0; font-weight: 900; text-transform: uppercase; letter-spacing: 500px; transition: letter-spacing 0.5s,left 0.5s; } ul li a:hover:before { content: attr(data-text); opacity: 1; left: 50%; letter-spacing: 10px; width: 1800px; height: 1800px; } ul li:nth-child(6n+1) a:before { background: #81ecec; } ul li:nth-child(6n+2) a:before { background: #ff7675; } ul li:nth-child(6n+3) a:before { background: #55efc4; } ul li:nth-child(6n+4) a:before { background: #a29bfe; } ul li:nth-child(6n+5) a:before { background: #fd79a8; } ul li:nth-child(6n+6) a:before { background: #ffeaa7; }
+    </style>
+
+</head>
+<body>
+    <h1 style="font-family:'Viga';font-size:28px;">PAWNEXPERT</h1>
+
+<ul>
+    <li><a href="{% url 'adminlogin' %}" data-text="AdminLogin">AdminLogin</a></li>
+    <li><a href="{% url 'pawnlogin' %}" data-text="PawnBrokerLogin">PawnBrokerLogin</a></li>
+    <li><a href="{% url 'pawnreg' %}" data-text="PawnBrokerRegister">PawnBrokerRegister</a></li>
+
+</ul> </body>
+<!--<br>-->
+<!-- <header>-->
+<!--        <nav class="navbar">-->
+<!--            <ul>-->
+<!--                <li><a href="{% url 'index' %}">Home</a></li>-->
+<!--                <li><a href="{% url 'adminlogin' %}">Admin Login</a></li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+<!--    </header>-->
+<!--<br>-->
+{% block 'body' %}
+<!--<div class="myDiv">-->
+<!--  <h2 align="left">This Project Contains Two Modules</h2>-->
+<!--    <h4 align="left">I. Admin</h4>-->
+<!--    <p style="text-align:left">-->
+<!--        1. Admin Login<br>-->
+<!--        2. Add Department<br>-->
+<!--        3. Update Department<br>-->
+<!--        4. View Departments<br>-->
+<!--        5. View Employees<br>-->
+<!--        6. Add Product<br>-->
+<!--        7. View Products<br>-->
+<!--    </p>-->
+
+<!--       <h4 align="left">II. Employee</h4>-->
+
+<!--    <p style="text-align:left">-->
+<!--        1. Employee Registration<br>-->
+<!--        2. Employee Login<br>-->
+<!--        3. Employee Profile<br>-->
+<!--        4. View Products<br>-->
+<!--    </p>-->
+
+
+<!--</div>-->
+
+
+{% endblock %}
+
+
+
+</body>
+</html>
